@@ -8,7 +8,6 @@ var observer = new MutationObserver(function (mutations) {
                     let element = document.createElement("script");
                     element.setAttribute("src", chrome.extension.getURL("js/OverwrittenFunction.js"));
                     document.head.appendChild(element);
-                    console.log("Injected")
                 }
             }
         }
