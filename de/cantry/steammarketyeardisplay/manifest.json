@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "SteamMarketYearDisplay",
+  "description": "This extension will display the year of Market transactions",
+  "version": "1.0",
+  "permissions": [
+    "https://steamcommunity.com/market/listings/**"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://steamcommunity.com/market/listings/**"
+      ],
+      "js": [
+        "js/SteamMarketListingsInjector.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    "js/OverwrittenFunction.js"
+  ]
+}
